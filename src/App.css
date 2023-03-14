@@ -1,4 +1,13 @@
 .App {
+  margin: auto;
+  padding: 0;
+  font-size: 62.5%;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+}
+
+.wrapper {
+
+  width: 80%;
+  max-width: 1000px;
 }
