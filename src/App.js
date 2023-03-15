@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppHeader from './components/AppHeader';
 import SearchForm from './components/SearchForm';
 import ButtonPanel from './components/ButtonPanel';
@@ -13,18 +13,24 @@ const categories = [
 ];
 
 function App() {
-  const [categoryValue, setCategoryValue] = useState('')
+	const [categoryValue, setCategoryValue] = useState('');
 
-  const categoryValueHandler = (category) => {
-    setCategoryValue(category)
-  }
-  
+	const categoryValueHandler = category => {
+		setCategoryValue(category);
+	};
+
 	return (
 		<div className='App wrapper'>
 			<AppHeader />
-			<SearchForm searchInput={categoryValue}/>
-			<ButtonPanel categoriesList={categories} pasteValue={categoryValueHandler}/>
-      <CategoryHeader />
+			<SearchForm
+				searchInput={categoryValue}
+				pasteValue={categoryValueHandler}
+			/>
+			<ButtonPanel
+				categoriesList={categories}
+				pasteValue={categoryValueHandler}
+			/>
+			<CategoryHeader />
 		</div>
 	);
 }
