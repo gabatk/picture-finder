@@ -11,6 +11,7 @@ const SearchForm = props => {
 	const SubmitHandler = event => {
 		event.preventDefault();
 		props.pasteValue(searchedInput);
+		setSearchedInput('');
 	};
 
 	return (
@@ -19,8 +20,8 @@ const SearchForm = props => {
 				type='text'
 				placeholder='Search...'
 				className='search'
-				defaultValue={props.searchInput}
-				onChange={insertText}></input>
+				onChange={insertText}
+				value={searchedInput}></input>
 		</form>
 	);
 };

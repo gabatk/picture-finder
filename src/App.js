@@ -22,15 +22,12 @@ function App() {
 	return (
 		<div className='App wrapper'>
 			<AppHeader />
-			<SearchForm
-				searchInput={categoryValue}
-				pasteValue={categoryValueHandler}
-			/>
+			<SearchForm pasteValue={categoryValueHandler} />
 			<ButtonPanel
 				categoriesList={categories}
 				pasteValue={categoryValueHandler}
 			/>
-			<CategoryHeader categoryTitle={categoryValue}/>
+			<CategoryHeader categoryTitle={categoryValue} />
 		</div>
 	);
 }
