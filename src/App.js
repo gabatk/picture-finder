@@ -30,7 +30,7 @@ function App() {
 				categoriesList={categories}
 				pasteValue={categoryValueHandler}
 			/>
-			<CategoryHeader />
+			<CategoryHeader categoryTitle={categoryValue}/>
 		</div>
 	);
 }
