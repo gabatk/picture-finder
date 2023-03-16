@@ -5,6 +5,7 @@ import ButtonPanel from './components/ButtonPanel';
 import CategoryHeader from './components/CategoryHeader';
 import ApiSection from './api/ApiSection';
 import './App.css';
+import { render } from 'react-dom';
 
 const categories = [
 	{ text: 'pets', id: 1 },
@@ -18,10 +19,9 @@ function App() {
 
 	const categoryValueHandler = category => {
 		setCategoryValue(category);
+			};
 
-	};
-
-
+			
 	return (
 		<div className='App wrapper'>
 			<AppHeader />
@@ -33,7 +33,9 @@ function App() {
 			<CategoryHeader categoryTitle={categoryValue} />
 			<ApiSection query={categoryValue}/>
 		</div>
+	
 	);
+
 }
 
 export default App;
