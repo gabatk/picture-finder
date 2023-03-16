@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader';
 import SearchForm from './components/SearchForm';
 import ButtonPanel from './components/ButtonPanel';
 import CategoryHeader from './components/CategoryHeader';
+import ApiSection from './api/ApiSection';
 import './App.css';
 
 const categories = [
@@ -17,7 +18,9 @@ function App() {
 
 	const categoryValueHandler = category => {
 		setCategoryValue(category);
+
 	};
+
 
 	return (
 		<div className='App wrapper'>
@@ -28,6 +31,7 @@ function App() {
 				pasteValue={categoryValueHandler}
 			/>
 			<CategoryHeader categoryTitle={categoryValue} />
+			<ApiSection query={categoryValue}/>
 		</div>
 	);
 }
