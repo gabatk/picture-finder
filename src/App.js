@@ -19,9 +19,8 @@ function App() {
 
 	const categoryValueHandler = category => {
 		setCategoryValue(category);
-			};
+	};
 
-			
 	return (
 		<div className='App wrapper'>
 			<AppHeader />
@@ -31,11 +30,9 @@ function App() {
 				pasteValue={categoryValueHandler}
 			/>
 			<CategoryHeader categoryTitle={categoryValue} />
-			<ApiSection query={categoryValue}/>
+			<ApiSection query={categoryValue} />
 		</div>
-	
 	);
-
 }
 
 export default App;

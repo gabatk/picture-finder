@@ -18,7 +18,7 @@ const SearchForm = props => {
 		<form onSubmit={SubmitHandler}>
 			<input
 				type='text'
-				placeholder='Search...'
+				placeholder='Type category and press Enter'
 				className='search'
 				onChange={insertText}
 				value={searchedInput}></input>

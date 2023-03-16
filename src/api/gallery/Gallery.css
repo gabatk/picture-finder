@@ -1,0 +1,23 @@
+.gallery__box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.gallery__item {
+    display: block;
+    margin: auto
+}
+
+@media (min-width:768px) {
+    .gallery__box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:992px) {
+    .gallery__box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
